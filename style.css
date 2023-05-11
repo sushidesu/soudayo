@@ -1,0 +1,41 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.soudayo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.souda {
+  opacity: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1rem;
+  pointer-events: none;
+  transition: all 0.14s ease-in-out;
+
+  transform: translateY(2rem);
+}
+
+.souda.yo {
+  opacity: 1;
+  transform: translateY(.1rem);
+}

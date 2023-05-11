@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>sou.dayo.app</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <p class="souda">そうだYO！</p>
+    <h1 class="soudayo">そうだよ</h1>
+  </body>
+  <script>
+    const yo = document.querySelector(".souda")
+    const soudayo = document.querySelector(".soudayo")
+    let prevInterval = null
+    soudayo.addEventListener("click", () => {
+      // cleanup
+      if (prevInterval !== null) {
+        clearInterval(prevInterval)
+      }
+
+      yo.classList.add("yo")
+      prevInterval = setTimeout(() => {
+        yo.classList.remove("yo")
+      }, 2000)
+    })
+  </script>
+</html>
